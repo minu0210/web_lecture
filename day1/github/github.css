@@ -63,10 +63,10 @@ li>a{
     text-align: center;
     line-height: 60px;
 }
-.active{
-    background: rgb(101, 114, 255);
-    color: white;
-}
 .disabled{
     color: lightgray;
+}
+#on{
+    background: rgb(101, 114, 255);
+    color: white;
 }
