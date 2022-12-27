@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    color: #292929;
+}
+
+.parent{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #cecece;
+}
+
+.parent::after{
+    content: "";
+    clear: left;
+    display: block;
+}
+
+.child{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    float: left;
+}
+
+.child::before{
+    content: "Child ";
+}
+
+.child::after{
+    content: " Box";
+}
+
+.red{
+    background-color: rgb(255, 82, 82);
+}
+
+.yellow{
+    background-color: rgb(209, 209, 102);
+}
