@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+
+/* 
+0. 동그라미 표시 제거
+1. 각각의 아이템을 가로로 배치 -> sideEffe t로 부모의 높이가 0
+2. 양 옆에 여백(padding) 필요
+3. 아이템(li) 사이에 간격(margin) 필요
+4. 선택된 아이템의 경우에는 두께 및 빝줄 추가
+-> class에 active라는 요소를 추가
+*/
+ul{
+  list-style: none;
+  padding-left: 0;
+  border-bottom: 1px solid #e5eaef;
+
+}
+ul::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+li {
+  float: left;
+  margin-right: 16px;
+}
+
+a{
+  display: block;
+  padding: 16px 20px;
+}
+
+li:nth-child(2) {
+  border-bottom: 3px solid rgb(91, 180, 236);
+}
+
+li:nth-child(2) > a {
+  color: rgb(91, 180, 236);
+  font-weight: bold;
+}
