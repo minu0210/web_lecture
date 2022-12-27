@@ -1,0 +1,80 @@
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size */
+  --spacing: 12px;
+  --spacing-small: 6px;
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 20px;
+  --font-regular: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+header{
+  background-color: #140a00;
+  display: flex;
+  align-items: center;  
+  padding: 8px;
+  position: relative;
+
+}
+.fas{
+  color: #fff;
+}
+.logo > .title{
+  color: #fff;
+}
+.logo{
+  color: #ff0000;
+}
+.fa-search{
+  position: absolute;
+  right: 8px;
+  bottom: 12px;
+}
+
+.player > video{
+  width: 100%;
+}
+
+
+.hashtags{
+  list-style: none;
+  color: #045fd4;
+  display: flex;
+}
+.hashtags > li {
+  margin: 4px;
+}
+
+
+.titleAndButton > .title{
+  font-size: large;
+}
+
+.metadata{
+  width: 100%;
+}
+image{
+  width: 100%;
+}
