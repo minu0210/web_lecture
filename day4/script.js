@@ -275,13 +275,17 @@ console.log(temp(1, 2, 3, 4, 5));
 const price = ["2000", "1000", "3000", "5000", "4000"];
 
 function getWonPrice(pricelist) {
-  const filterPrice = pricelist.filter(
-    (pricelists) => Number(pricelists) > 1000
-  );
-  const sortWon = filterPrice.sort((a, b) => a - b);
+  // const filterPrice = pricelist.filter(
+  //   (pricelists) => Number(pricelists) > 1000
+  // );
+  // const sortWon = filterPrice.sort((a, b) => a - b);
 
-  const result = sortWon.map((sortWon) => sortWon + "원");
-  return result;
+  // const result = sortWon.map((sortWon) => sortWon + "원");
+  // return result;
+  return pricelist
+    .filter((item) => Number(itme) > 1000)
+    .sort((a, b) => a - b)
+    .map((item) => item + "원");
 }
 console.log(getWonPrice(price));
 
