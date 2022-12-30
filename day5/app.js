@@ -1,3 +1,5 @@
+/*
+
 // HTML문서에 직접 접근할 수 있게!
 
 const sumbitBtn = document.getElementById("submit-btn");
@@ -39,4 +41,27 @@ div1.addEventListener("click", clickHandler);
 
 // div1.removeEventListener("click", clickHandler);
 
+*/
+
 // 이벤트 버블링 / 캡쳐링
+
+const loginForm = document.querySelector(".login-form form");
+const loginInput = document.querySelector(".login-form input");
+const greeting = document.querySelector("#greeting");
+
+const loginSubmitHandler = (event) => {
+    event.preventDefault();
+    const username = loginInput.value;
+    if (username === "") {
+        alert("값을 입력해주세요");
+    } else if (username.length > 15) {
+        alert("15자 이내로 작성해주세요");
+    } else {
+        greeting.classList.toggle("hidden");
+        loginForm.classList.toggle("hidden");
+        greeting.innerText = `${username}님, 환영합니다.`;
+    }
+    console.log(username);
+};
+
+loginForm.addEventListener("submit", loginSubmitHandler);
